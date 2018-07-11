@@ -1,7 +1,7 @@
-FROM alpine
+FROM alpine:3.8
 
 ENV SQUID_CACHE_DIR=/var/spool/squid \
-    SQUID_LOG_DIR=/var/log/squid 
+    SQUID_LOG_DIR=/var/log/squid
 
 RUN apk add --update squid bash \
  && mv /etc/squid/squid.conf /etc/squid/squid.conf.dist
