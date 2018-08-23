@@ -2,12 +2,10 @@
 
 ## Usage:
 ```
-docker pull danielxlee/alpine-squid
-docker run -d -p 3128:3128 --name squid danielxlee/alpine-squid
+docker run --name proxy --restart=always -d -p 3128:3128 danielxlee/alpine-squid
 ```
 
-## Build docker images
+## Manual Build docker images
 ```
-docker build -t danielxlee/alpine-squid:latest .
-docker push danielxlee/squid-d:latest
+docker build -t alpine-squid:latest .
 ```
